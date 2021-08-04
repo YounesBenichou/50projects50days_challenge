@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root{
+    --line-progress :#7ebf04;
+    --line-grey : grey;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto',sans-serif;
+}
+
+body{
+    background-color: #ebedf0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.circle-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 350px;
+    max-width: 100%;
+}
+
+
+.circle-container::before {
+    content: '';
+    background-color: var(--line-grey);
+    position: absolute;
+    top: 50%;
+    height: 4px;
+    left: 0%;
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: -1;
+    transition: 0.4s ease;
+}
+
+.circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: white;
+    border: solid 3px  var(--line-grey);
+    width: 40px;
+    height: 40px;
+    transition: 0.4s ease;
+}
+
+.circle.active {
+    border: solid 3px var(--line-progress);
+}
+
+.progress {
+    background-color: var(--line-progress);
+    position: absolute;
+    top: 50%;
+    height: 4px;
+    left: 0%;
+    transform: translateY(-50%);
+    width: 0%;
+    z-index: -1;
+    transition: 0.4s ease;
+}
+
+
+.btn{
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    background-color: var(--line-progress);
+    border-radius: 10px;
+    border: 0;
+    padding: 8px 20px;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+}
+
+.btn:active{
+    transform: scale(0.9);
+}
+
+.btn:focus{
+    outline: 0;
+}
+
+.btn:disabled {
+    background-color: grey;
+}
+
+
+
