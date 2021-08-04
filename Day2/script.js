@@ -2,8 +2,11 @@ const progress = document.getElementById('progress');
 const prev = document.getElementById('prev');
 const next = document.getElementById('next');
 const circles = document.querySelectorAll('.circle');
+const number = document.getElementById('number-value');
 
+const numbers = ['One','Two','Three','Four','Five'];
 let currentActive = 1
+
 
 next.addEventListener('click', () => {
     currentActive++;
@@ -35,6 +38,7 @@ function update(){
             circle.classList.remove('active');
         }
     })
+    number.innerHTML = numbers[currentActive-1];
 
     const actives = document.querySelectorAll('.active');
     
