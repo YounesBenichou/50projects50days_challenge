@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+
+
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto',sans-serif;
+}
+
+body{
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* height: 100vh; */
+    /* overflow: hidden; */
+    margin: 0;
+    background-color: #333333;
+}
+
+/* .container{
+    background-color: white;
+    z-index: -1;
+} */
+
+
+.circle{
+    background-color: #ED7677;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.4s linear;
+}
+
+.circle-container{
+    position: fixed;
+    top: -100px;
+    left: -100px;
+    z-index: 0;
+}
+
+.circle.with-nav{
+    transform: rotate(-90deg);
+}
+#close {
+    position:absolute;
+    left: 20%;
+    top: 60%;
+    background-color: transparent;
+    border: 0px;
+    font-size: 35px;
+    color: white;
+    margin: 0;
+}
+
+#open {
+    position:absolute;
+    left: 59%;
+    top: 60%;
+    background-color: transparent;
+    border: 0px;
+    font-size: 35px;
+    color: white;
+}
+
+nav{
+    position: absolute;
+    top: 70%;
+    color:white;
+    transform: translateX(-200px);
+    transition: transform 0.4s ease-in;
+    z-index: 10;
+}
+
+nav.active{
+    transform: translateX(20px);
+}
+
+nav > ul {
+    line-height: 40px;
+    width: 200px;
+    position: absolute;
+    font-size: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+
+nav ul li i {
+    font-size: 24px;
+    margin-right: 10%;
+}
+
+nav ul li + li {
+    transform: translateX(15px);
+}
+
+
+nav ul li + li + li{
+    transform: translateX(30px);
+}
+
+.content{
+    padding: 10% 5%;
+    /* pad */
+    /* max-width: 1000px;
+    margin: 0px 0; */
+    background-color: white;
+    z-index: -1;
+    transform-origin: top left;
+    transition: transform 0.4s linear;
+}
+
+img{
+    max-width: 100%;
+}
+
+.content h1 {
+    margin: 0;
+  }
+  
+.content small {
+color: #555;
+font-style: italic;
+}
+
+.content p {
+color: #333;
+line-height: 1.5;
+}
+
+
+
+/* .container.show-nav{
+    transform: rotate(-20deg);
+    transform-origin: top left;
+} */
+
+
+.content.with-nav{
+    transform: rotate(-20deg);
+    transform-origin: top left;
+} 
+
+
